@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dragon Express — اتنقلنا</title>
+<meta name="robots" content="noindex">
+<script>
+  // العنوان القديم /asema-app/… ← الجديد /dragon-express/… بنفس المسار والهاش.
+  // ملفات التطبيق القديمة (asema*.apk) بتتحوّل لأسمائها الجديدة.
+  (function () {
+    var p = location.pathname.replace(/^\/asema-app\/?/, '');
+    p = p.replace(/^asema(-arm64|-arm32)?\.apk$/, function (_, a) { return 'dragon-express' + (a || '') + '.apk'; });
+    location.replace('/dragon-express/' + p + location.search + location.hash);
+  })();
+</script>
+<meta http-equiv="refresh" content="2;url=/dragon-express/">
+</head>
+<body style="margin:0;background:#060D18;color:#EAF2FB;font-family:system-ui,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center">
+  <p>اللينك اتغيّر — <a style="color:#F5922B" href="/dragon-express/">Dragon Express</a></p>
+</body>
+</html>
